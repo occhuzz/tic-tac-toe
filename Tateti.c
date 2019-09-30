@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void loop(char matriz[3][3]);
-void inicio(char matriz[3][3]);
-void tablero(char matriz[3][3]);
-void jugador1(char matriz[3][3]);
-void jugador2(char matriz[3][3]);
-void winner(char matriz[3][3]);
+void loop(char matriz[][3]);
+void inicio(char matriz[][3]);
+void tablero(char matriz[][3]);
+void jugador1(char matriz[][3]);
+void jugador2(char matriz[][3]);
+void winner(char matriz[][3]);
 
 int main()
 {
@@ -17,7 +17,7 @@ int main()
     return 0;
 }
 
-void loop (char matriz[3][3])
+void loop (char matriz[][3])
 {
     int i;
 
@@ -38,7 +38,7 @@ void loop (char matriz[3][3])
     winner(matriz);
 }
 
-void inicio(char matriz[3][3])
+void inicio(char matriz[][3])
 {
     int i,j;
 
@@ -55,7 +55,7 @@ void inicio(char matriz[3][3])
     }
 }
 
-void tablero(char matriz[3][3])
+void tablero(char matriz[][3])
 {
     int i,j;
 
@@ -79,7 +79,7 @@ void tablero(char matriz[3][3])
     printf("\n\n");
 }
 
-void jugador1(char matriz[3][3])
+void jugador1(char matriz[][3])
 {
     int i,j,k;
     char ficha1;
@@ -210,7 +210,7 @@ void jugador1(char matriz[3][3])
     }while(k==1);
 }
 
-void jugador2(char matriz[3][3])
+void jugador2(char matriz[][3])
 {
     int i,j,k;
     char ficha1;
@@ -341,7 +341,7 @@ void jugador2(char matriz[3][3])
     }while(k==1);
 }
 
-void winner(char matriz[3][3])
+void winner(char matriz[][3])
 {
     if(matriz[0][0]=='X'&&matriz[1][1]=='X'&&matriz[2][2]=='X')
     {
